@@ -14,10 +14,7 @@ func NewAppointmentUseCase(repo domain.AppointmentRepository) *AppointmentUseCas
 }
 
 func (u *AppointmentUseCase) Create(appointment *domain.Appointment) error {
-	err := u.repo.Create(appointment)
-	if err != nil {
-		return err
-	}
+	return u.repo.Create(appointment)
 
 	// Publish the event
 	messaging.PublishAppointmentCreated(appointment)
