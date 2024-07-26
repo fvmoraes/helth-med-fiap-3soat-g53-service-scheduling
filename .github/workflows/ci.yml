@@ -11,6 +11,7 @@ env:
   SERVICE: helthmed-scheduling
   IMAGE: helthmed-scheduling
   REGION: us-central1
+  TAG: 'latest'
 
 jobs:
   build:
