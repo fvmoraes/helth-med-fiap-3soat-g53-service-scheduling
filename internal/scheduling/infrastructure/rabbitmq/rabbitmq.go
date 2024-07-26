@@ -11,7 +11,7 @@ var Channel *amqp.Channel
 
 func Init() {
 	var err error
-	Conn, err = amqp.Dial("amqp://guest:guest@localhost:5672/")
+	Conn, err = amqp.Dial("amqp://fcplheqi:${RABBIT_PASSWORD}@albatross-01.rmq.cloudamqp.com:5672/fcplheqi")
 	if err != nil {
 		log.Fatalf("failed to connect to RabbitMQ: %v", err)
 	}
